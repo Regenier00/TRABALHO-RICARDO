@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda - Painel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Ola, <span id="nomeUsuario"></span></h1>
+    <button id="sair">Sair</button>
+    <p id="mensagem"></p>
+
+    <section>
+      <h2>Resumo</h2>
+      <p>Atendimentos concluidos: <strong id="totalAtendimentos">0</strong></p>
+      <p>Faturamento total: <strong id="faturamento">R$ 0,00</strong></p>
+    </section>
+
+    <section>
+      <h2>Servicos</h2>
+      <form id="formServico">
+        <input type="hidden" id="servicoId">
+        <label>Nome <input type="text" id="servicoNome"></label>
+        <label>Preco (R$) <input type="number" step="0.01" id="servicoPreco"></label>
+        <label>Duracao (minutos) <input type="number" id="servicoDuracao"></label>
+        <button type="submit">Salvar servico</button>
+      </form>
+      <table>
+        <thead>
+          <tr><th>Nome</th><th>Preco</th><th>Duracao</th><th>Acoes</th></tr>
+        </thead>
+        <tbody id="listaServicos"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Agendamentos</h2>
+      <form id="formAgendamento">
+        <input type="hidden" id="agendamentoId">
+        <label>Servico <select id="agendamentoServico"></select></label>
+        <label>Nome do cliente <input type="text" id="clienteNome"></label>
+        <label>Telefone do cliente <input type="text" id="clienteTelefone"></label>
+        <label>Data e hora <input type="datetime-local" id="dataHora"></label>
+        <button type="submit">Salvar agendamento</button>
+      </form>
+      <table>
+        <thead>
+          <tr><th>Data/Hora</th><th>Cliente</th><th>Servico</th><th>Status</th><th>Acoes</th></tr>
+        </thead>
+        <tbody id="listaAgendamentos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "sistema-agendamento",
+  "version": "1.0.0",
+  "description": "Sistema de agendamento para profissionais autonomos (barbeiros, manicures)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.1"
+  }
+}
